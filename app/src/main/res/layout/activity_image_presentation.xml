@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImagePresentationActivity">
+
+    <RelativeLayout
+        android:background="#F3F3F3"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_rounded_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="0dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/timothy_txt" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#F3F3F3"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:text="Your chosen image..."
+                        android:layout_marginStart="24dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintDimensionRatio="1:1.4"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="24dp"
+                            app:cardElevation="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:src="@drawable/dwayne"
+                                    android:scaleType="centerCrop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/background_image"/>
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="12dp"
+                                    android:id="@+id/star"
+                                    android:src="@drawable/ic_star" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_marginStart="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/edit_text_background_light_rounded"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_info_outlined_black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="14dp"
+                                android:fontFamily="serif"
+                                android:text="To create an image with timothy, firstly select your background. Here bellow are listed available backgrounds, have fun :)"
+                                android:textColor="#A8A8A8"
+                                android:textSize="11sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="6dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:text="Add your image..."
+                        android:layout_marginStart="24dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_background_light_rounded"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_info_outlined_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="14dp"
+                        android:fontFamily="serif"
+                        android:text="To create an image with timothy, firstly select your background. Here bellow are listed available backgrounds, have fun :)"
+                        android:textColor="#A8A8A8"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="180dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/dwayne"
+                                android:scaleType="centerCrop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/my_image"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/choose_image_btn"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:background="#E6E6E6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/choose_image_btn_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginVertical="13dp"
+                            android:fontFamily="serif"
+                            android:text="Choose image"
+                            android:textColor="#373737"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#D8D8D8"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/continue_btn"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@drawable/orange_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/continue_btn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginVertical="13dp"
+                        android:fontFamily="serif"
+                        android:text="Choose an Image.."
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_arrow_right_white"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

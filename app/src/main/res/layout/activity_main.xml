@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:background="#F3F3F3"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/timothy_txt"/>
+
+        <ImageView
+            android:id="@+id/more"
+            android:padding="10dp"
+            android:src="@drawable/ic_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#F3F3F3"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingBottom="128dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <LinearLayout
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_info_outlined_black"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:textColor="#A8A8A8"
+                        android:textSize="10sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="To create an image with timothy, firstly select your background. Click on the button Choose Image down bellow and select your background. Than select an image you want to merge with the background. Have fun :)"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:text="My current images..."
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="16dp"
+                            app:cardCornerRadius="24dp"
+                            app:cardElevation="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:padding="16dp"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bell_black"
+                                    android:layout_width="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="20dp"/>
+
+                                <TextView
+                                    android:id="@+id/text"
+                                    android:textColor="#A8A8A8"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text=""/>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            app:cardCornerRadius="200dp"
+                            app:cardElevation="4dp"
+                            android:layout_margin="10dp"
+                            app:layout_constraintDimensionRatio="1:1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:src="@drawable/timothy_logo_colorfull_two"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view_my_photos"/>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/no_images_layout"
+                    android:layout_width="match_parent"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_info_outlined_black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="normal"
+                            android:textSize="10dp"
+                            android:textColor="#A5A5A5"
+                            android:layout_marginStart="16dp"
+                            android:text="You haven't created any images yet. To do that click Choose Image down bellow."/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <LinearLayout
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_info_outlined_black"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:textColor="#A8A8A8"
+                        android:textSize="10sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Down below are listed images that can serve as your background. Click on it and and than choose your own image. Have fun :)"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8D8"/>
+
+                <TextView
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Choose your background image..."
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="visible"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#D8D8D8"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/choose_image_btn"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@drawable/orange_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/choose_image_btn_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginVertical="13dp"
+                        android:fontFamily="serif"
+                        android:text="Choose Image.."
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_arrow_right_white"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
